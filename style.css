@@ -1,0 +1,20 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 30px);
+    grid-template-rows: repeat(16, 30px);
+    margin: auto;
+    margin-top: 100px;
+}
+
+.square {
+    border: 2px solid;
+    border-color: black;
+}
+
+.center {
+    display: flex;
+}
+
+.square:hover {
+    background-color: darkblue;
+}
