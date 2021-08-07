@@ -1,10 +1,9 @@
 #container {
     display: grid;
-    grid-template-columns: repeat(16, 30px);
-    grid-template-rows: repeat(16, 30px);
     margin: auto;
     margin-top: 80px;
-    background-color: white;
+    width: 500px;
+    height: 500px;
 }
 
 body {
@@ -14,25 +13,16 @@ body {
 .square {
     border: 2px solid;
     border-color: black;
+    background-color: white;
 }
-
-.center {
-    display: flex;
-}
-
-/* .square:hover {
-    background-color: purple;
-} */
 
 button {
-    height: 40px;
+    height: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
     background-color: beige;
-    color: grey;
+    color: purple;
+    font-size: 30px;
     font-weight: bold;
 }
-/* h1 {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
