@@ -1,11 +1,14 @@
-
 const container = document.querySelector('#container');
 
 function newGrid(gridSize) {
+    if (Number.isInteger(size) == false) {
+        return;
+    }
+    container.innerHTML = '';
+
     for (i = 0; i < gridSize * gridSize; i++) {
         const square = document.createElement('div');
-        square.classList.add(`square`);
-        square.setAttribute("id", `square${i + 1}`);
+        square.className = "square";
         container.appendChild(square);
     }
     
@@ -20,7 +23,8 @@ function newGrid(gridSize) {
     });
 }
 
-newGrid(16);
+let size = 16;
+newGrid(size);
 
 function getRandomColor() {
             var letters = '0123456789ABCDEF';
@@ -32,11 +36,9 @@ function getRandomColor() {
 }
 
 function askSize() {
-    let size = 0;
-    while (size < 3 || size > 30) {
-        size = parseInt(prompt('Enter grid size (3-30)'));
-    }
-    container.innerHTML = '';
+    do {
+        size = parseInt(prompt('Enter grid size (max 30)'));
+    } while (size < 1 || size > 30);
     newGrid(size);
 }
 
