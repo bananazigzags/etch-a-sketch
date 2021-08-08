@@ -1,7 +1,7 @@
 #container {
     display: grid;
     margin: auto;
-    margin-top: 80px;
+    margin-top: 30px;
     width: 500px;
     height: 500px;
 }
