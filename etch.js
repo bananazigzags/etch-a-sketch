@@ -4,7 +4,7 @@ function newGrid(gridSize) {
     if (Number.isInteger(size) == false) {
         return;
     }
-    container.innerHTML = '';
+    container.textContent = '';
 
     for (i = 0; i < gridSize * gridSize; i++) {
         const square = document.createElement('div');
