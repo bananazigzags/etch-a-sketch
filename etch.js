@@ -23,9 +23,6 @@ function newGrid(gridSize) {
     });
 }
 
-let size = 16;
-newGrid(size);
-
 function getRandomColor() {
             var letters = '0123456789ABCDEF';
             var color = '#';
@@ -54,3 +51,6 @@ resize.addEventListener('click', () => askSize());
 
 const clear = document.querySelector('#clear');
 clear.addEventListener('click', () => clearGrid());
+
+let size = 16;
+newGrid(size);
