@@ -7,16 +7,17 @@ function newGrid(gridSize) {
         square.classList.add(`square`);
         square.setAttribute("id", `square${i + 1}`);
         container.appendChild(square);
-        container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr); 
+    }
+    
+    container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr); 
         grid-template-rows: repeat(${gridSize}, 1fr);`);
 
-        const squares = document.querySelectorAll('.square');
-        squares.forEach((square) => {
-            square.addEventListener('mouseover', () => {
-                square.style.backgroundColor = getRandomColor();
-            });
+    const squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = getRandomColor();
         });
-    }
+    });
 }
 
 newGrid(16);
