@@ -15,12 +15,12 @@ function newGrid(gridSize) {
     container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr); 
         grid-template-rows: repeat(${gridSize}, 1fr);`);
 
-    const squares = document.querySelectorAll('.square');
-    squares.forEach((square) => {
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = getRandomColor();
-        });
-    });
+    container.onmouseover = function(event) {
+        let element = event.target;
+        if (element.className == "square") {
+            element.style.backgroundColor = getRandomColor();
+        }
+    }
 }
 
 function getRandomColor() {
