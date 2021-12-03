@@ -11,11 +11,19 @@ function newGrid(gridSize) {
         square.className = "square";
         container.appendChild(square);
     }
+<<<<<<< HEAD
 
     container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr); 
         grid-template-rows: repeat(${gridSize}, 1fr);`);
 
     container.onmouseover = function (event) {
+=======
+    
+    container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr); 
+        grid-template-rows: repeat(${gridSize}, 1fr);`);
+
+    container.onmouseover = function(event) {
+>>>>>>> af03af50e8cdf98f4d7446ca7401eefe4b958958
         let element = event.target;
         if (element.className == "square") {
             element.style.backgroundColor = getRandomColor();
@@ -53,4 +61,8 @@ const clear = document.querySelector('#clear');
 clear.addEventListener('click', () => clearGrid());
 
 let size = 16;
+<<<<<<< HEAD
 newGrid(size);
+=======
+newGrid(size);
+>>>>>>> af03af50e8cdf98f4d7446ca7401eefe4b958958
