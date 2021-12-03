@@ -6,24 +6,16 @@ function newGrid(gridSize) {
     }
     container.textContent = '';
 
-    for (i = 0; i < gridSize * gridSize; i++) {
+    for (let i = 0; i < gridSize * gridSize; i++) {
         const square = document.createElement('div');
         square.className = "square";
         container.appendChild(square);
     }
-<<<<<<< HEAD
-
-    container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr); 
-        grid-template-rows: repeat(${gridSize}, 1fr);`);
-
-    container.onmouseover = function (event) {
-=======
     
     container.setAttribute("style", `grid-template-columns: repeat(${gridSize}, 1fr); 
         grid-template-rows: repeat(${gridSize}, 1fr);`);
 
     container.onmouseover = function(event) {
->>>>>>> af03af50e8cdf98f4d7446ca7401eefe4b958958
         let element = event.target;
         if (element.className == "square") {
             element.style.backgroundColor = getRandomColor();
@@ -34,7 +26,7 @@ function newGrid(gridSize) {
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
-    for (var i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
@@ -61,8 +53,4 @@ const clear = document.querySelector('#clear');
 clear.addEventListener('click', () => clearGrid());
 
 let size = 16;
-<<<<<<< HEAD
 newGrid(size);
-=======
-newGrid(size);
->>>>>>> af03af50e8cdf98f4d7446ca7401eefe4b958958
